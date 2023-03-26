@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<robot name="roarm_assembly" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find roarm_assembly_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find roarm_assembly_description)/urdf/roarm_assembly.trans" />
+<xacro:include filename="$(find roarm_assembly_description)/urdf/roarm_assembly.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="2.842170943040401e-16 1.6253665080512292e-15 0.010307344162242452" rpy="0 0 0"/>
+    <mass value="0.9330886709339293"/>
+    <inertia ixx="0.001421" iyy="0.001421" izz="0.002578" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1__1__1">
+  <inertial>
+    <origin xyz="-0.003248824428456881 0.00456933378923944 0.025593798133347008" rpy="0 0 0"/>
+    <mass value="1.6261208283126793"/>
+    <inertia ixx="0.002624" iyy="0.002426" izz="0.002118" ixy="-2.6e-05" iyz="-0.000455" ixz="0.000319"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0 -0.041" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/link_1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque565656"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0 -0.041" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/link_1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2__1__1">
+  <inertial>
+    <origin xyz="0.0014995401177805212 0.0024349435050276605 0.08033532296460895" rpy="0 0 0"/>
+    <mass value="0.2532575834482899"/>
+    <inertia ixx="0.000795" iyy="0.000761" izz="3.6e-05" ixy="0.0" iyz="5.6e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.008711 -0.041051 -0.11574" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/link_2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.008711 -0.041051 -0.11574" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/link_2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3__1__1">
+  <inertial>
+    <origin xyz="0.01895305134049728 0.04968902458298733 0.0013294047430696398" rpy="0 0 0"/>
+    <mass value="0.6682248227150333"/>
+    <inertia ixx="0.002549" iyy="9.9e-05" izz="0.00257" ixy="-9e-06" iyz="2.1e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.004711 -0.041051 -0.284598" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/link_3__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin xyz="0.004711 -0.041051 -0.284598" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/link_3__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="eef_base_1">
+  <inertial>
+    <origin xyz="0.019105713731911726 0.04318596653770779 0.004330849807673176" rpy="0 0 0"/>
+    <mass value="0.33153308863416786"/>
+    <inertia ixx="9.1e-05" iyy="9.2e-05" izz="0.000121" ixy="-0.0" iyz="-5e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.004411 -0.168975 -0.284598" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/eef_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin xyz="0.004411 -0.168975 -0.284598" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/eef_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_claw_1">
+  <inertial>
+    <origin xyz="0.006511678868823683 0.0644377863644181 0.0008022347112953687" rpy="0 0 0"/>
+    <mass value="0.027361315989100073"/>
+    <inertia ixx="2.5e-05" iyy="2e-06" izz="2.7e-05" ixy="-5e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.016901 -0.21391 -0.27514" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/left_claw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin xyz="0.016901 -0.21391 -0.27514" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/left_claw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_claw_1">
+  <inertial>
+    <origin xyz="-0.0065193592272983075 0.06443898009782462 0.0008022347112930373" rpy="0 0 0"/>
+    <mass value="0.027361315989100486"/>
+    <inertia ixx="2.5e-05" iyy="2e-06" izz="2.7e-05" ixy="5e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.046099 -0.21391 -0.27514" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/right_claw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.046099 -0.21391 -0.27514" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://roarm_assembly_description/meshes/right_claw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="base_twist" type="continuous">
+  <origin xyz="0.0 0.0 0.041" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_1__1__1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="shoulder" type="revolute">
+  <origin xyz="-0.008711 0.041051 0.07474" rpy="0 0 0"/>
+  <parent link="link_1__1__1"/>
+  <child link="link_2__1__1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit upper="1.396263" lower="-2.094395" effort="100" velocity="100"/>
+</joint>
+
+<joint name="elbow" type="revolute">
+  <origin xyz="0.004 0.0 0.168858" rpy="0 0 0"/>
+  <parent link="link_2__1__1"/>
+  <child link="link_3__1__1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit upper="2.617994" lower="-2.617994" effort="100" velocity="100"/>
+</joint>
+
+<joint name="wrist" type="revolute">
+  <origin xyz="0.0003 0.127924 0.0" rpy="0 0 0"/>
+  <parent link="link_3__1__1"/>
+  <child link="eef_base_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+  <limit upper="2.094395" lower="-2.094395" effort="100" velocity="100"/>
+</joint>
+
+<joint name="left_finger" type="revolute">
+  <origin xyz="-0.01249 0.044935 -0.009458" rpy="0 0 0"/>
+  <parent link="eef_base_1"/>
+  <child link="left_claw_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="1.308997" lower="-0.261799" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_finger" type="revolute">
+  <origin xyz="0.05051 0.044935 -0.009458" rpy="0 0 0"/>
+  <parent link="eef_base_1"/>
+  <child link="right_claw_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="0.261799" lower="-1.308997" effort="100" velocity="100"/>
+</joint>
+
+</robot>
