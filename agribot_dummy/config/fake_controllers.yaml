@@ -1,0 +1,25 @@
+controller_list:
+  - name: fake_drive_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - back_left
+      - back_right
+      - front_left
+      - front_right
+  - name: fake_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - Slider
+      - arm_twist
+      - shoulder
+      - elbow
+      - wrist
+  - name: fake_eef_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - wrist
+      - left_finger
+      - right_finger
+initial:  # Define initial robot poses per group
+  - group: arm
+    pose: normal

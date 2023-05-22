@@ -1,0 +1,65 @@
+arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - Slider
+    - arm_twist
+    - shoulder
+    - elbow
+    - wrist
+  gains:
+    Slider:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    arm_twist:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    shoulder:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    elbow:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    wrist:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+gripper_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - left_finger
+    - right_finger
+  gains:
+    wrist:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    left_finger:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    right_finger:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+kinect_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - camera_twist
+  gains:
+    camera_twist:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

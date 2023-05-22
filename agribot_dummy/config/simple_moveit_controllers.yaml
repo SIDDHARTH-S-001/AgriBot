@@ -1,0 +1,25 @@
+controller_list:
+  - name: arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Slider
+      - arm_twist
+      - shoulder
+      - elbow
+      - wrist
+  - name: gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - wrist
+      - left_finger
+      - right_finger
+  - name: kinect_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - camera_twist

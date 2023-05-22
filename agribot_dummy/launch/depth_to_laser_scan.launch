@@ -1,0 +1,20 @@
+<launch>
+
+  <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan">
+    <remap from="image" to="/Kinect/depth/image_raw"/>
+    <remap from="camera_info" to="/Kinect/color/camera_info"/> 
+    <!-- Set the appropriate parameters for the conversion -->
+    <param name="frame_id" type="string" value="Kinect"/>
+    <param name="scan_height" type="double" value="1.0"/>
+    <param name="range_min" type="double" value="0.5"/>
+    <param name="range_max" type="double" value="4.5"/>
+    <param name="approx_sync" type="bool" value="false"/>
+    <param name="queue_size" type="int" value="10"/>
+    <param name="output_frame_id" type="str" value="Kinect"/>
+  </node>
+<!-- 
+  <include file="$(find auto_clean_description)/launch/amcl.launch"/> -->
+
+  <include file="$(find agribot_dummy)/launch/gmapping.launch"/>
+
+</launch>
