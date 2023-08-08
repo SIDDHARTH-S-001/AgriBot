@@ -15,10 +15,10 @@ Servo fr;
 Servo bl;
 Servo br;
 
-#define fl_pin 1
-#define fr_pin 3
-#define bl_pin 5
-#define br_pin 6
+#define fl_pin D3
+#define fr_pin D4
+#define bl_pin D7
+#define br_pin D8
 
 int fl_pos = 0;
 int fr_pos = 0;
@@ -29,10 +29,10 @@ int fr_ppos = 0;
 int bl_ppos = 0;
 int br_ppos = 0;
 
-#define pwm_1 4
-#define dir_1 0
-#define pwm_2 2
-#define dir_2 15
+#define pwm_1 D1
+#define dir_1 D2
+#define pwm_2 D5
+#define dir_2 D6
 int rpm = 0;
 
 void setup() {
