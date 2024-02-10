@@ -1,0 +1,13 @@
+<launch>
+  <!-- Launch the RGBD camera driver -->
+  <arg name="camera" default="Kinect" />  <!-- Modify the camera name as per your device -->
+  <arg name="depth_registered" default="true" />  <!-- Set to true if depth is registered -->
+
+  <node name="rgbd_camera" pkg="openni2_launch" type="openni2.launch">
+    <arg name="device_id" value="$(arg camera)" />
+    <arg name="depth_registered" value="$(arg depth_registered)" />
+  </node>
+
+  <!-- Additional nodes and configurations for your application -->
+  <!-- ... -->
+</launch>
