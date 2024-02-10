@@ -18,7 +18,7 @@ while not rospy.is_shutdown():
     traj.joint_names = joint_names
     
     point = JointTrajectoryPoint()
-    point.positions = [0.0, 1.0, 0.5, 0.0, 0.0]  # Set the joint angles here
+    point.positions = [0.0, 1.0, 0.5, 0.0]  # Set the joint angles here
     point.time_from_start = rospy.Duration(1.0)  # Set the time duration here
     
     traj.points.append(point)
